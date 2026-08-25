@@ -25,3 +25,25 @@ body .header-image img.profile-photo{display:block!important;position:absolute!i
 @media(max-width:575px){.header-image{width:300px!important;height:390px!important}.header-image:before{top:16px!important;width:245px!important;height:340px!important;border-width:8px!important}.header-image img.profile-photo{top:35px!important;width:205px!important;height:300px!important}}';
   document.head.appendChild(style);
 });
+
+/* Update Expertise section: What I Bring to the Table. */
+document.addEventListener('DOMContentLoaded',function(){
+  var service=document.querySelector('#service');
+  if(!service)return;
+  var items=[
+    ['lni-bar-chart','Business Analysis'],
+    ['lni-layers','Functional Product Management'],
+    ['lni-briefcase','Project Management'],
+    ['lni-write','Requirements & Documentation'],
+    ['lni-vector','Process, Workflow & Wireframe Design'],
+    ['lni-users','Stakeholder Management']
+  ];
+  var container=service.querySelector('.container');
+  if(!container)return;
+  var cards=items.map(function(item){return '<div class="col-lg-4 col-md-6"><div class="single-service"><div class="service-icon"><i class="'+item[0]+'"></i></div><div class="service-content"><h4 class="service-title">'+item[1]+'</h4></div></div></div>'}).join('');
+  container.innerHTML='<div class="row justify-content-center"><div class="col-lg-8"><div class="section-title text-center pb-40"><h2 class="title">What I Bring to the Table</h2></div></div></div><div class="row justify-content-center expertise-cards">'+cards+'</div>';
+  var expertiseStyle=document.createElement('style');
+  expertiseStyle.id='expertise-section-override';
+  expertiseStyle.textContent='#service .expertise-cards{margin-top:10px}#service .single-service{height:100%;min-height:180px;padding:38px 30px;display:flex;flex-direction:column;justify-content:center;transition:transform .25s ease,box-shadow .25s ease}#service .single-service:hover{transform:translateY(-5px)}#service .service-icon{margin-bottom:18px;color:#2563eb;font-size:36px}#service .service-title{font-size:21px;line-height:1.4;margin:0;color:#273043;font-weight:700}@media(max-width:767px){#service .single-service{min-height:150px;padding:28px 24px}#service .section-title .title{font-size:32px}}';
+  document.head.appendChild(expertiseStyle);
+});
