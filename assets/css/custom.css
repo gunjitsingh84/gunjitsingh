@@ -11,22 +11,23 @@ body{overflow-x:hidden}
 .header-content-right .title{font-size:48px!important;line-height:1.12!important;text-transform:uppercase!important;letter-spacing:1px!important;color:#30333b!important;margin-bottom:10px!important}
 .header-content-right p{font-size:15px!important;line-height:1.6!important;color:#6e7380!important;margin-bottom:26px!important;font-weight:400!important}
 .header-content-right .main-btn{font-size:13px!important;padding:14px 28px!important;border-radius:8px!important;box-shadow:0 8px 20px rgba(117,78,249,.22)!important}
+
+/* Hero portrait: smaller oval portrait contained inside the purple frame */
 .header-image{position:relative!important;width:440px!important;height:500px!important;margin:0 auto!important;overflow:visible!important}
-.header-image:after{content:""!important;display:block!important;position:absolute!important;left:22px!important;right:0!important;top:20px!important;height:438px!important;border:10px solid var(--unfold-purple)!important;z-index:-1!important;box-sizing:border-box!important}
-body .header-image img.profile-photo{display:block!important;position:absolute!important;left:58px!important;top:0!important;width:360px!important;max-width:none!important;height:500px!important;object-fit:cover!important;object-position:center top!important;border-radius:0!important;clip-path:none!important;box-shadow:none!important;z-index:2!important;background:#eee!important}
+.header-image:after{content:""!important;display:block!important;position:absolute!important;left:40px!important;top:35px!important;width:360px!important;height:420px!important;border:10px solid var(--unfold-purple)!important;z-index:1!important;box-sizing:border-box!important}
+body .header-image img.profile-photo{display:block!important;position:absolute!important;left:85px!important;top:52px!important;width:270px!important;max-width:none!important;height:360px!important;object-fit:cover!important;object-position:center top!important;border-radius:50% / 46%!important;clip-path:none!important;box-shadow:none!important;z-index:2!important;background:#eee!important}
 .header-image::marker{display:none!important}
 .header-image .profile-photo{filter:none!important}
 .header-social{bottom:22px!important}
 .header-social-icon ul li a{border:1px solid #d8d8d8!important;color:#777!important;background:#fff!important}
 .header-social-icon ul li a:hover{color:#fff!important;background:var(--unfold-purple)!important;border-color:var(--unfold-purple)!important}
 
-/* About section: restore original two-column composition */
+/* About section: original two-column composition, with LinkedIn only */
 #about{padding-top:95px!important;padding-bottom:95px!important}
 #about .container{max-width:1140px!important}
 #about>.container>.row:first-child{display:none!important}
 #about>.container>.row.mt-50{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;column-gap:74px!important;align-items:start!important;margin-top:0!important;position:relative!important}
-#about>.container>.row.mt-50:before{content:"Hello, I'm Gunjit Singh\A\AWith 12+ years of hands-on experience as a Business Analyst and over 7 years leading international teams as a Project and Account Manager, I help transform business requirements into practical, scalable digital solutions.\A\A\A✉  Email: singhgunjit@hotmail.com                 📍  Location: Chandigarh, INDIA\A\A☎  Phone: +91-985-580-1271                      🔗  LinkedIn: /in/gunjitsingh";white-space:pre-wrap;display:block!important;font-size:16px!important;line-height:1.9!important;color:#747b8b!important;padding:0 18px 0 0!important}
-#about>.container>.row.mt-50:after{content:"";position:absolute;left:0;top:0;width:50%;height:1px}
+#about>.container>.row.mt-50:before{content:"Hello, I'm Gunjit Singh\A\AWith 12+ years of hands-on experience as a Business Analyst and over 7 years leading international teams as a Project and Account Manager, I help transform business requirements into practical, scalable digital solutions.\A\A🔗  LinkedIn: linkedin.com/in/gunjitsingh";white-space:pre-wrap;display:block!important;font-size:16px!important;line-height:1.9!important;color:#747b8b!important;padding:0 18px 0 0!important}
 #about>.container>.row.mt-50>.col-lg-8{width:100%!important;max-width:none!important;grid-column:2!important;padding:0!important}
 #about .skill-list{padding-top:0!important;margin:0!important;max-width:none!important}
 #about .skill-item{margin-bottom:31px!important}
@@ -40,15 +41,15 @@ body .header-image img.profile-photo{display:block!important;position:absolute!i
 
 @media(max-width:1199px){
  .header-image{width:400px!important;height:460px!important}
- body .header-image img.profile-photo{left:46px!important;width:330px!important;height:460px!important}
- .header-image:after{left:15px!important;top:20px!important;height:405px!important}
+ .header-image:after{left:35px!important;top:30px!important;width:330px!important;height:390px!important}
+ body .header-image img.profile-photo{left:78px!important;top:48px!important;width:245px!important;height:330px!important}
 }
 @media(max-width:991px){
  .header-content{min-height:auto!important;padding:125px 0 70px!important}
  .header-content-right{padding-bottom:30px!important}
  .header-image{display:block!important;width:340px!important;height:430px!important}
- body .header-image img.profile-photo{left:40px!important;width:280px!important;height:430px!important}
- .header-image:after{height:375px!important;left:14px!important}
+ .header-image:after{left:28px!important;top:25px!important;width:285px!important;height:355px!important}
+ body .header-image img.profile-photo{left:63px!important;top:42px!important;width:220px!important;height:300px!important}
  #about>.container>.row.mt-50{grid-template-columns:1fr!important;gap:45px!important}
  #about>.container>.row.mt-50:before{padding:0!important}
  #about>.container>.row.mt-50>.col-lg-8{grid-column:1!important}
@@ -56,8 +57,8 @@ body .header-image img.profile-photo{display:block!important;position:absolute!i
 @media(max-width:575px){
  .header-content-right .title{font-size:38px!important}
  .header-image{width:300px!important;height:390px!important}
- body .header-image img.profile-photo{left:34px!important;width:250px!important;height:390px!important}
- .header-image:after{height:340px!important}
+ .header-image:after{left:24px!important;top:22px!important;width:250px!important;height:320px!important}
+ body .header-image img.profile-photo{left:57px!important;top:36px!important;width:190px!important;height:260px!important}
  #about{padding-top:70px!important;padding-bottom:70px!important}
  #about>.container>.row.mt-50:before{font-size:15px!important}
 }
