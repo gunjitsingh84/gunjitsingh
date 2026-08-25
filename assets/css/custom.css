@@ -39,6 +39,21 @@ body .header-image img.profile-photo{display:block!important;position:absolute!i
 #about .skill-item:nth-child(3) .bar-inner{width:90%!important}
 #about .skill-item:nth-child(4) .bar-inner{width:95%!important}
 
+/* Work Experience: Freelancer reference-inspired numbered timeline, retaining the portfolio blue theme */
+#experience{--experience-blue:#2563eb;--experience-blue-dark:#1d4ed8;background:#f8fbff!important;padding-top:110px!important;padding-bottom:110px!important;position:relative!important;overflow:hidden!important}
+#experience:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:linear-gradient(90deg,var(--experience-blue),#60a5fa,transparent)!important}
+#experience .section-title{margin-bottom:65px!important}
+#experience .section-title .title{font-size:42px!important;color:#172033!important;letter-spacing:-.5px!important;position:relative!important;display:inline-block!important}
+#experience .section-title .title{font-size:0!important}
+#experience .section-title .title:after{content:"Work Experience"!important;font-size:42px!important;font-weight:700!important;line-height:1.2!important;color:#172033!important}
+#experience .about-content{max-width:1040px!important;margin:0 auto!important;counter-reset:job!important;position:relative!important;padding:0 0 0 190px!important}
+#experience .about-content:before{content:""!important;position:absolute!important;left:86px!important;top:24px!important;bottom:24px!important;width:2px!important;background:#dbeafe!important}
+#experience .about-content h5{counter-increment:job!important;position:relative!important;margin:0!important;padding:24px 32px 8px!important;background:#fff!important;border:1px solid #e5edf9!important;border-bottom:0!important;border-radius:10px 10px 0 0!important;font-size:23px!important;font-weight:700!important;line-height:1.3!important;color:#172033!important;box-shadow:0 8px 30px rgba(37,99,235,.05)!important}
+#experience .about-content h5:before{content:counter(job, decimal-leading-zero)!important;position:absolute!important;left:-190px!important;top:16px!important;width:82px!important;height:82px!important;border-radius:50%!important;background:#fff!important;border:2px solid #bfdbfe!important;color:var(--experience-blue)!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:22px!important;font-weight:800!important;box-shadow:0 0 0 10px #f8fbff!important;z-index:2!important}
+#experience .about-content h5:after{content:""!important;position:absolute!important;left:-96px!important;top:56px!important;width:64px!important;height:2px!important;background:#bfdbfe!important}
+#experience .about-content p{margin:0 0 28px!important;padding:0 32px 25px!important;background:#fff!important;border:1px solid #e5edf9!important;border-top:0!important;border-radius:0 0 10px 10px!important;color:#64748b!important;font-size:15px!important;font-weight:500!important;line-height:1.7!important;box-shadow:0 14px 30px rgba(37,99,235,.05)!important}
+#experience .about-content h5:first-child{color:var(--experience-blue-dark)!important}
+
 @media(max-width:1199px){
  .header-image{width:400px!important;height:460px!important}
  .header-image:after{left:35px!important;top:30px!important;width:330px!important;height:390px!important}
@@ -53,6 +68,19 @@ body .header-image img.profile-photo{display:block!important;position:absolute!i
  #about>.container>.row.mt-50{grid-template-columns:1fr!important;gap:45px!important}
  #about>.container>.row.mt-50:before{padding:0!important}
  #about>.container>.row.mt-50>.col-lg-8{grid-column:1!important}
+ #experience .about-content{padding-left:150px!important}
+ #experience .about-content h5:before{left:-150px!important}
+}
+@media(max-width:767px){
+ #experience{padding-top:80px!important;padding-bottom:80px!important}
+ #experience .section-title{margin-bottom:45px!important}
+ #experience .section-title .title:after{font-size:34px!important}
+ #experience .about-content{padding-left:0!important}
+ #experience .about-content:before{display:none!important}
+ #experience .about-content h5{padding:72px 24px 8px!important}
+ #experience .about-content h5:before{left:24px!important;top:18px!important;width:42px!important;height:42px!important;font-size:14px!important;box-shadow:none!important}
+ #experience .about-content h5:after{display:none!important}
+ #experience .about-content p{padding:0 24px 24px!important}
 }
 @media(max-width:575px){
  .header-content-right .title{font-size:38px!important}
